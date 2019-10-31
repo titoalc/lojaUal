@@ -1,9 +1,12 @@
 package View;
 
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 import javax.swing.*;
-import java.awt.*;
+
 
 public class TelaCadastroFuncionario {public VBox getTelaCadastrarFuncionario(Stage stage){
     VBox raiz = new VBox(10);

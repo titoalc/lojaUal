@@ -1,6 +1,7 @@
 package View;
 
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 import java.awt.*;
 
