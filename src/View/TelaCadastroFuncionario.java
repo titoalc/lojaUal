@@ -45,7 +45,7 @@ public class TelaCadastroFuncionario {public VBox getTelaCadastrarFuncionario(St
     Label senhaFuncionario = new Label("senha");
     TextField senha = new TextField();
 
-    raiz.getChildren().addAll(nome,nomeFuncionario,sobrenome,sobrenomeFuncionario,nascimento,dataNascimento,rgFuncionario,rg,cpfFuncionario,cpf,enderecoFuncionario,endereco,cepFuncionario,cep,telefoneFuncionario,telefone,cargoFuncionario,cargo,loginFuncionario,login,senhaFuncionario,senha,)
+    raiz.getChildren().addAll(nome,nomeFuncionario,sobrenome,sobrenomeFuncionario,nascimento,dataNascimento,rgFuncionario,rg,cpfFuncionario,cpf,enderecoFuncionario,endereco,cepFuncionario,cep,telefoneFuncionario,telefone,cargoFuncionario,cargo,loginFuncionario,login,senhaFuncionario,senha);
      return raiz;
     }
 }
