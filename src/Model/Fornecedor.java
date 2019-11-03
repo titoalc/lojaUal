@@ -1,7 +1,7 @@
 package Model;
 
 public class Fornecedor {
- 
+
     private String nomeFornecedor;
     private String endereco;
     private String cep;
