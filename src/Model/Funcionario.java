@@ -1,11 +1,9 @@
 package Model;
 
-import java.util.Date;
-
 public class Funcionario {
     private String nomeFuncionario;
     private String sobrenome;
-    private Date dataNascimento;
+    private String dataNascimento;
     private Double rg;
     private Double cpf;
     private String endereco;
@@ -15,7 +13,7 @@ public class Funcionario {
     private String login;
     private String senha;
 
-    public Funcionario(String nomeFuncionario, String sobrenome, Date dataNascimento, Double rg, Double cpf, String endereco, Double cep, Double telefone, String cargo, String login, String senha) {
+    public Funcionario(String nomeFuncionario, String sobrenome, String dataNascimento, Double rg, Double cpf, String endereco, Double cep, Double telefone, String cargo, String login, String senha) {
         this.nomeFuncionario = nomeFuncionario;
         this.sobrenome = sobrenome;
         this.dataNascimento = dataNascimento;
@@ -45,11 +43,11 @@ public class Funcionario {
         this.sobrenome = sobrenome;
     }
 
-    public Date getDataNascimento() {
+    public String getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(Date dataNascimento) {
+    public void setDataNascimento(String dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 

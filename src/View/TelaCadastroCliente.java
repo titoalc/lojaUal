@@ -5,7 +5,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-
 public class TelaCadastroCliente {
     public VBox getTelaCadastroCliente(Stage stage) {
         VBox raiz = new VBox(10);
@@ -32,9 +31,9 @@ public class TelaCadastroCliente {
         Label cep = new Label("CEP: ");
         TextField CEP = new TextField();
 
-        raiz.getChildren().addAll(nome,nomeCliente,Sobrenome,sobreNome,datanascimento,dataNascimento,RG,rg,CPF,cpf,Endereco,endereco,CEP,cep);
+        raiz.getChildren().addAll(nome, nomeCliente, Sobrenome, sobreNome, datanascimento, dataNascimento, RG, rg, CPF, cpf, Endereco, endereco, CEP, cep);
         return raiz;
+
+
     }
-
-
 }

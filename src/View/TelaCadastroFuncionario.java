@@ -1,17 +1,20 @@
 package View;
 
+
+import Model.Funcionario;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuBar;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-import javax.swing.*;
 
-
-public class TelaCadastroFuncionario {public VBox getTelaCadastrarFuncionario(Stage stage){
-    VBox raiz = new VBox(10);
+public class TelaCadastroFuncionario {public VBox getTelaCadastrarFuncionario(Stage stage) {
+    VBox raiz = new VBox(2);
 
     MenuBarView menuBarView = new MenuBarView();
+    MenuBar menuBar =  menuBarView.getMenuBar(stage);
     Label nome = new Label("nome");
     TextField nomeFuncionario = new TextField();
 
@@ -44,8 +47,19 @@ public class TelaCadastroFuncionario {public VBox getTelaCadastrarFuncionario(St
 
     Label senhaFuncionario = new Label("senha");
     TextField senha = new TextField();
+    Button btnCadastrar = new Button("cadastrar funcionario");
+    Label cadastroComSucesso = new Label("");
 
-    raiz.getChildren().addAll(nome,nomeFuncionario,sobrenome,sobrenomeFuncionario,nascimento,dataNascimento,rgFuncionario,rg,cpfFuncionario,cpf,enderecoFuncionario,endereco,cepFuncionario,cep,telefoneFuncionario,telefone,cargoFuncionario,cargo,loginFuncionario,login,senhaFuncionario,senha);
+    btnCadastrar.setOnAction(actionEvent -> {
+        Funcionario funcionario = new Funcionario(nomeFuncionario.getText(),sobrenome.getText(),dataNascimento.getText(),Double.valueOf(rg.getText()),Double.valueOf(cpf.getText()),endereco.getText(),Double.valueOf(cep.getText()),Double.valueOf(telefone.getText()),cargo.getText(),login.getText(),senha.getText());
+        cadastroComSucesso.setText("cadastrado com sucesso! ");
+        System.out.println(funcionario);
+    });
+
+
+
+
+    raiz.getChildren().addAll(menuBar,nome,nomeFuncionario,sobrenomeFuncionario,sobrenome,nascimento,dataNascimento,rgFuncionario,rg,cpfFuncionario,cpf,enderecoFuncionario,endereco,cepFuncionario,cep,telefoneFuncionario,telefone,cargoFuncionario,cargo,loginFuncionario,login,senhaFuncionario,senha,btnCadastrar,cadastroComSucesso);
      return raiz;
     }
 }
