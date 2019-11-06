@@ -1,0 +1,61 @@
+create database lojaUal;
+
+use lojaUal;
+
+create table Cliente (
+	id int auto_increment primary key,
+    nome varchar(255),
+    sobrenome varchar(255),
+    datanascimeto date,
+    rg varchar(14),
+    cpf varchar(14),
+    endereco varchar(255),
+    cep varchar (9)
+    );
+
+
+
+   create table Funcionario (
+   	id int auto_increment primary key,
+	nome varchar(255),
+    sobrenome varchar(255),
+   datanascimeto date,
+    rg varchar(14),
+    cpf varchar(14),
+    endereco varchar(255),
+    cep varchar (9),
+    telefone varchar(20),
+    cargo varchar(255),
+    login varchar(50),
+    senha varchar(50)
+    );
+
+
+	create table Fornecedor (
+   	id int auto_increment primary key,
+    nome varchar(255),
+	endereco varchar(255),
+	cep varchar (9),
+    cidade varchar(255),
+    estado varchar(255),
+    telefone varchar(20),
+    email varchar(60),
+    nomeProduto varchar(70),
+    marca varchar(50),
+    codigo varchar(50)
+    );
+
+    create table Produto (
+    id int auto_increment primary key,
+    nome varchar(255),
+    marca varchar(255),
+    precoDeVenda decimal(10,2),
+    precoDeCusto decimal(10,2),
+    fornecedor varchar(255),
+    quantidadeProduto int,
+    categoria varchar(255),
+    codigo varchar(255)
+    );
+
+
+    
